@@ -1,0 +1,214 @@
+*
+{
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* animation for polygon*/
+#ball
+{
+      clip-path: polygon(25% 0%, 75% 0%, 43% 54%, 75% 100%, 25% 100%, 0% 50%);
+height: 150px;
+width: 150px;
+
+    background-color: black;
+    animation: rakesh 5s ease 2s infinite alternate-reverse;
+}
+@keyframes rakesh {
+   0%{
+
+
+    transform:translateX(0%);
+    }
+  
+   100%{
+     
+            transform:translateX(1000%);
+
+    }
+    
+}
+#ball:hover{
+    transform: translate(-200%);
+}
+/* header css */
+header
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
+}
+.menu ul li{
+    display: inline-block;
+    margin: 5px;
+    height: 40px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 10px;
+    transition: all 1s ease;
+}
+.menu ul li:hover
+{
+     transform:scale(1.05)
+
+}
+a
+{
+    text-decoration: none;
+}
+
+a:active{
+    color: green;
+}
+/* Hero banner css */
+#home
+{
+    height: 80vh;
+    width: 100vw;
+    padding: 10px 200px;
+     display: flex;
+     justify-content: space-between;
+}
+#home div
+{
+    /* root parent--> body font-size:16px; */
+    padding:20px 50px;
+    height:100%; 
+}
+
+#home div h2{
+    font-size: 46px;
+}
+.skill
+{
+    color: aquamarine;
+}
+.buttons
+{
+    display: flex;
+    height: 100px;
+    width: 200px;
+    gap: 50px;
+}
+button
+{
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    border-color: red;
+    color: black;
+transition:all 3s ease;
+
+}
+.buttons button:hover{
+    transform: scale(1.05);
+}
+
+.left p{
+    font-size: 20px;
+}
+#home
+{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+#home div>img
+{
+    height: 100%;
+    width: 100%;
+}
+a{
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+/* about css */
+#about
+{
+    margin:100px ;
+}
+figure
+{
+    float: left;
+}
+
+.heading
+{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 36px;
+    filter: drop-shadow(3px 3px black);
+}
+/*psuedo classes .. all pseudo elemnts consits : */
+/* pseudo elements -- all pseudo elements will contain :: */
+
+figure img
+{
+    clip-path: circle(120px);
+    filter: grayscale();
+}
+figure img:hover{
+    filter:none;
+}
+/* project css*/
+#projects
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.card
+{
+    height: 400px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 5px 5px black;
+    transition: all 3s ease;
+}
+.card img
+{
+    height: 200px;
+    width: 200px;
+}
+.card:hover
+{
+    transform: scale(1.05);
+}
+/* form css*/
+#contact
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+    width: fit-content;
+    box-shadow: 5px 5px black;
+}
+input
+{
+    height: 30px;
+    border-radius: 10px;
+    width: 200px;
+}
+textarea
+{
+    height: 200px;
+    border-radius: 10px;
+    border-color: black;
+}
