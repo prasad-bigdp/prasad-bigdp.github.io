@@ -1,9 +1,19 @@
+
+
 *
 {
     box-sizing: border-box;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   --prasad:black;
 }
-
+/* SASS,SCSS */
+body
+{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 /* animation for polygon*/
 #ball
 {
@@ -11,7 +21,7 @@
 height: 150px;
 width: 150px;
 
-    background-color: black;
+    background-color:var(--prasad);
     animation: rakesh 5s ease 2s infinite alternate-reverse;
 }
 @keyframes rakesh {
@@ -39,8 +49,9 @@ header
     background-color: black;
     position: sticky;
     top: 0px;
-    width: 100%;
     z-index: 1000;
+    width: 100%;
+    padding: 0px 20px;
 }
 .menu ul li{
     display: inline-block;
@@ -68,8 +79,8 @@ a:active{
 /* Hero banner css */
 #home
 {
-    height: 80vh;
-    width: 100vw;
+    width: 80vw;
+    margin: auto;
     padding: 10px 200px;
      display: flex;
      justify-content: space-between;
@@ -117,12 +128,10 @@ transition:all 3s ease;
 #home
 {
     display: flex;
-    height: 100%;
     align-items: center;
 }
 #home div>img
 {
-    height: 100%;
     width: 100%;
 }
 a{
@@ -133,10 +142,9 @@ a{
 #about
 {
     margin:100px ;
-}
-figure
-{
-    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .heading
@@ -148,7 +156,11 @@ figure
 }
 /*psuedo classes .. all pseudo elemnts consits : */
 /* pseudo elements -- all pseudo elements will contain :: */
-
+h2
+{
+    
+    fill:red;
+}
 figure img
 {
     clip-path: circle(120px);
@@ -162,12 +174,15 @@ figure img:hover{
 {
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    place-items: center;
     gap: 20px;
 }
 .card
 {
     height: 400px;
-    width: 200px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
     text-align: center;
     box-shadow: 5px 5px black;
     transition: all 3s ease;
@@ -211,4 +226,25 @@ textarea
     height: 200px;
     border-radius: 10px;
     border-color: black;
+}
+@media(max-width:480px){
+
+    header
+    {
+     width: 100%;
+    }
+}
+@media((min-width:480px) and (max-width:768px)){
+
+    #about
+    {
+        display: block;
+    }
+
+}
+@media((min-width:768px) and (max-width:992px)){
+
+}
+@media(orientation:landscape){
+
 }
